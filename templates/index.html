@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{%block title%} Team {%endblock%}
+
+{% block content %}
+
+<h2>this is our Home  page</h2>
+<p>hey there this is our Home page</p>
+{%if user.is_authenticated%}
+<li>Hello,{{user.first_name}}</li>
+<li><a href="accounts/logout">Logout</a></li>
+{% else %}
+<li><a href="accounts/register">Register</a></li>
+<li><a href="accounts/login">Login</a></li>
+{% endif %}
+
+
+{% endblock %}
+

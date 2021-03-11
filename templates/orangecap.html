@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%block title%} Home {%endblock%}
+
+{% block content %}
+   <h1>TEAM</h1>
+   <div class="row">
+        {% for orangecap in orangecaps %}
+          <div class="col">
+             <div class="card" style="width: 18rem;">
+                  <img  class="card-img-top" src="{{ orangecap.img_url }}" width="200" height="200"  alt="...">
+                  <div class="card-body">
+                      <h6 class="card-title">{{orangecap.name}}</h6>
+                      
+                      <a href="#" class="btn btn-primary">Players</a>
+                 </div>
+              </div>
+          </div>
+       {% endfor %}
+    </div>
+{%endblock%} 
